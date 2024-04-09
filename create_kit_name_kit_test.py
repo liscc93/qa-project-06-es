@@ -13,7 +13,6 @@ def positive_assert(kit_body, auth_token):
     response = sender_stand_request.post_new_client_kit(kit_body, auth_token)
     assert response.status_code == 201
     assert response.json()["name"] == kit_body["name"]
-
 # Función para las pruebas negativas
 def negative_assert_code_400(kit_body, auth_token):
     response = sender_stand_request.post_new_client_kit(kit_body, auth_token)
@@ -35,13 +34,13 @@ def test_create_kit_511_letters_in_name_get_success_response():
 def test_create_kit_no_letters_in_name_get_non_success_response():
     auth_token = get_new_user_token("Lis")
     kit_body = data.kit_no_letters
-    positive_assert(kit_body, auth_token)
+    negative_assert_code_400(kit_body, auth_token)
 
 # 4to El número es mayor que la cantidad permitida (512) / Código de respuesta: 400
 def test_create_kit_512_letters_in_name_get_non_success_response():
     auth_token = get_new_user_token("Lis")
     kit_body = data.kit_512_letters
-    positive_assert(kit_body, auth_token)
+    negative_assert_code_400(kit_body, auth_token)
 
 # 5to Se permiten caracteres especiales (№%@',) / Código de respuesta: 201
 def test_create_kit_special_character_in_name_get_success_response():
@@ -65,10 +64,10 @@ def test_create_kit_nums_in_name_get_success_response():
 def test_create_kit_no_parameters_in_name_get_non_success_response():
     auth_token = get_new_user_token("Lis")
     kit_body = data.kit_no_parameters
-    positive_assert(kit_body, auth_token)
+    negative_assert_code_400(kit_body, auth_token)
 
 # 9no El tipo de parametro es diferente (123) / Código de respuesta: 400
 def test_create_kit_type_num_in_name_get_non_success_response():
     auth_token = get_new_user_token("Lis")
     kit_body = data.kit_type_num
-    positive_assert(kit_body, auth_token)
+    negative_assert_code_400(kit_body, auth_token)

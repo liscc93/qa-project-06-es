@@ -2,12 +2,23 @@
 
 <h2> Description of Project 6 </h2>
 
-<h4>The main objective of this project is to optimize and simplify the testing procedure specifically designed for the "name" field, through the implementation of automation tools. This field, characterized by its variability in the number of characters, as well as the inclusion of special characters and numerals, presents a considerable challenge in terms of manual verification. Consequently, automation becomes an essential resource to streamline this process and ensure its accuracy. Depending on the specific needs of each case, criteria and protocols will be established for the comprehensive validation of the data entered in this field, thus ensuring the integrity and coherence of the information. </h4>
+<h4>The main objective of this project is to optimize and simplify the testing procedure specifically designed for the "name" field, through the implementation of automation tools. This field, characterized by its variability in the number of characters, as well as the inclusion of special characters and numerals, presents a considerable challenge in terms of manual verification. Consequently, automation becomes an essential resource to streamline this process and ensure its accuracy. Depending on the specific needs of each case, criteria and protocols will be established for the comprehensive validation of the data entered in this field, thus ensuring the integrity and coherence of the information. 
 
-<h2>Steps to Execute the Tests:</h2>
+Within this project, both positive and negative tests will be conducted to verify compliance with specifications and ensure successful user creation, while also preventing errors with invalid inputs. Automating these tests minimizes human errors and saves time efficiently.
 
-<h4>- You need to have the pytest and request packages installed to run the tests.</h4>
-<h4>- Execute all tests using the pytest command.</h4>
+This project relies on the documentation provided by apiDoc to define the functionality specifications and ensure their consistency with the system requirements.
+
+</h4>
+
+<h2>Steps to run the tests:</h2>
+
+<h3>1. You need to have the pytest and request packages installed to run the tests.</h3>
+    <li>First, go to the "Python Packages" option located at the bottom left of PyCharm.</li>
+    <li>Second, search for the packages in the search bar.</li>
+    <li>Third, install the latest version of the packages.</li>
+<h3>2. Run the tests.</h3>
+    <li>Ensure that the URL in the configuration.py file is up-to-date.</li>
+    <li>Now you can run the tests using the "pytest" command followed by the name of the file containing the tests.</li>
 
 <h2>Verification</h2>
 

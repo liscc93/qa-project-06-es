@@ -9,6 +9,9 @@ create_new_kit = {
   "cardId": 1
 }
 
+headers = data.headers.copy()
+headers["Authorization"] = f"Bearer {token}"
+
 kit_1_letter = {"name": "a"}
 kit_511_letters = {"name":"Abcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcd"
                             "abcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcd"
