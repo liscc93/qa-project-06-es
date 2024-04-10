@@ -3,15 +3,10 @@ user_body = {
     "phone": "+11234567890",
     "address": "123 Elm Street, Hilltop"
 }
-
 create_new_kit = {
   "name": "Lis",
   "cardId": 1
 }
-
-headers = data.headers.copy()
-headers["Authorization"] = f"Bearer {token}"
-
 kit_1_letter = {"name": "a"}
 kit_511_letters = {"name":"Abcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcd"
                             "abcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcd"
